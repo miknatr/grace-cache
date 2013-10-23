@@ -9,5 +9,11 @@
     ],
     "require": {
 
+    },
+    "autoload": {
+        "psr-0": {
+            "Grace\\Cache": "lib/",
+            "Grace\\Tests\\Cache": "lib/"
+        }
     }
 }
