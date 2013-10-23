@@ -1,0 +1,13 @@
+{
+    "name": "miknatr/grace-cache",
+    "description": "Simple cache interface and memcache implementation",
+    "authors": [
+        {
+            "name": "miknatr",
+            "email": "miknatr@gmail.com"
+        }
+    ],
+    "require": {
+
+    }
+}
