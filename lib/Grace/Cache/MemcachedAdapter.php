@@ -23,6 +23,10 @@ class MemcachedAdapter extends AbstractAdapter
             $r = $this->adapter->get($this->formatKey($key));
             $resultCode = $this->adapter->getResultCode();
 
+            if ($resultCode !== \Memcached::RES_NOTFOUND && $resultCode !== \Memcached::RES_SUCCESS) {
+                throw new \Exception('MemcachedAdapted error: ' . $this->adapter->getResultMessage());
+            }
+
             if ($resultCode === \Memcached::RES_NOTFOUND) {
                 if ($cacheSetter === null) {
                     return null;
